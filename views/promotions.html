@@ -1,0 +1,21 @@
+<ons-page>
+    <ons-toolbar ng-style="{'background-color':topbarBG}">
+        <div class="left">
+            <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Promotions</div>
+        <div class="right"></div>
+    </ons-toolbar>
+    <img src="images/promoComps.jpg" alt="Competitions" onclick="myNavigator.pushPage('views/competition.html', { animation : 'slide' } )" style="max-width: 600px; width: 100%;">
+    <br>
+    <img src="images/promoWall.jpg" alt="Wallpapers" onclick="myNavigator.pushPage('views/promopage2.html', { animation : 'slide' } )" style="max-width: 600px; width: 100%;">
+    <br>
+    <img src="images/promoRewards.jpg" alt="Rewards" onclick="myNavigator.pushPage('views/promopage1.html', { animation : 'slide' } )" style="max-width: 600px; width: 100%;">
+    <ons-bottom-toolbar ng-style="{'background-color':footerBG}">
+        <ons-row vertical-align="center" style="height: 44px">
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 25px;" onclick="myNavigator.pushPage('views/home.html', { animation : 'slide' } )"><ons-icon icon="ion-home"></ons-icon></ons-col>
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 25px;" onclick="myNavigator.pushPage('views/socialmedia.html', { animation : 'slide' } )"><ons-icon icon="ion-heart"></ons-icon></ons-col>
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 15px;" ng-click="loadpage(5)">T&C’s</ons-col>
+        </ons-row>
+    </ons-bottom-toolbar>
+</ons-page>

@@ -1,0 +1,248 @@
+<ons-page style="font-size: 14px;">
+    <ons-toolbar ng-style="{'background-color':topbarBG}">
+        <div class="left">
+            <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Sign Up</div>
+        <div class="right"></div>
+    </ons-toolbar>
+    <div class="topBanner">
+        <div><img src="{{Banner1}}" style="max-width: 800px; width: 100%;" /></div>
+    </div>
+    <ons-row align="center">
+        <ons-col width="90%"><div class="formListInputLrg"><input type="search" class="search-input" ng-model="data.quickSearch" placeholder="Quick search for a shop / deal"></div></ons-col>
+        <ons-col width="10%"><ons-button ng-click="quickSearch()"><ons-icon icon="fa-search"></ons-button></ons-col>
+    </ons-row>
+    <h2 class="myHeader"><span>SIGN UP</span></h2>
+    <div class="formList"><strong>HOW ARE YOU SIGNING UP?</strong></div>
+    <div style="padding: 0px 20px 20px 10px;">
+        <ons-row vertical-align="center">
+            <ons-col vertical-align="center">
+                <label for="signType" class="center">
+                    Union:
+                </label>
+            </ons-col>
+            <ons-col vertical-align="center">
+                <div class="formListInputLrg">
+                    <select id="signType" ng-model="data.reg_unionCode" style="width:100%;">
+                        <option value="APSA">APSA</option>
+                        <option value="COWU">COWUSA</option>
+                        <option value="CSAA">CSAAWU</option>
+                        <option value="CWAW">CWAWU</option>
+                        <option value="DEMA">DEMAWUSA</option>
+                        <option value="DEPA">DEPACU</option>
+                        <option value="DETA">DETAWU</option>
+                        <option value="EUSA">EUSA</option>
+                        <option value="FAWU">FAWU</option>
+                        <option value="FUWO">FUWO</option>
+                        <option value="GIWU">GIWUSA</option>
+                        <option value="ICTU">ICTU</option>
+                        <option value="IICU">IICUOSA</option>
+                        <option value="MATU">MATUSA</option>
+                        <option value="MWAS">MWASA</option>
+                        <option value="NTM">NTM (PRIVATE company)</option>
+                        <option value="NTMM">NTM</option>
+                        <option value="NUCA">NUCAAW</option>
+                        <option value="NUMS">NUMSA</option>
+                        <option value="NUPA">NUPSAW</option>
+                        <option value="PRIS">PRISAWU</option>
+                        <option value="SACS">SACOSWU</option>
+                        <option value="SACU">SACSU</option>
+                        <option value="SAFP">SAFPU</option>
+                        <option value="SAIC">SAICWU</option>
+                        <option value="SALP">SALIPSWU</option>
+                        <option value="SAPU">SAPU</option>
+                        <option value="SASA">SASAWU</option>
+                        <option value="SASW">SASWU</option>
+                        <option value="TASW">TASWU</option>
+                        <option value="THOR">THORN</option>
+                        <option value="VIWU">VIWU</option>
+                        <option value="YNIT">YNITU</option>
+                        <option value="OTEH">OTHER</option>
+                    </select>
+                </div>
+            </ons-col>
+        </ons-row>
+        <ons-row vertical-align="center">
+            <ons-col vertical-align="center">
+                <label for="signType1" class="center">
+                    Shop Steward Code:<br><small>(If applicable)</small>
+                </label>
+            </ons-col>
+            <ons-col vertical-align="center">
+                <div class="formListInputLrg"><input type="text" class="text-input" id="signType1" ng-model="data.reg_shopCode" placeholder="Enter Code" /></div>
+            </ons-col>
+        </ons-row>
+    </div>    
+    <div class="formList"><strong>PERSONAL DETAILS:</strong></div>
+    <div style="padding: 0px 20px 20px 20px;">
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_FirstName" placeholder="First Name" value="">
+        </div>
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_LastName" placeholder="Last Name" value="">
+        </div>
+
+        <div class="form-row button-bar" style="width:100%; padding: 10px;">
+            <ons-row>
+                <ons-col>
+                    <label class="left">
+                        <ons-radio name="gender" input-id="genderM" ng-model="data.reg_gender" value="M"></ons-radio>
+                    </label>
+                    <label for="genderM" class="center">
+                        Male
+                    </label>
+                </ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col>
+                    <label class="left">
+                        <ons-radio name="gender" input-id="genderF" ng-model="data.reg_gender" value="F" ></ons-radio>
+                    </label>
+                    <label for="genderF" class="center">
+                        Female
+                    </label>
+                </ons-col>
+            </ons-row>
+        </div>
+
+        <div class="form-row">
+            <select ng-model="data.reg_title" style="width:100%;">
+                <option value="">Select your Title</option>
+                <option value="MR">Mr</option>
+                <option value="MRS">Mrs</option>
+                <option value="MISS">Miss</option>
+                <option value="MS">Ms</option>
+                <option value="PROF">Professor</option>
+                <option value="DOCT">Doctor</option>
+                <option value="HE">His Excellency</option>
+                <option value="HON">Honorable</option>
+                <option value="OTHE">Other</option>
+            </select>
+        </div>
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_IDNum" placeholder="ID Number" value="">
+        </div>
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_CellNumber" placeholder="Cell Number" value="">
+        </div>
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_EmailAddress" placeholder="Email Address" value="">
+        </div>
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_Address1" placeholder="Address Line 1" value="">
+        </div>
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_Address2" placeholder="Address Line 2" value="">
+        </div>
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_PostCode" placeholder="Postal Code" value="">
+        </div>
+        
+        <div class="form-row formListInputLrg">
+            <select ng-model="data.reg_Province" ng-change="getDistCode()" style="width:100%;">
+                <option value="">Select your Province</option>
+                <option value="EASC">Eastern Cape</option>
+                <option value="FREE">Free State</option>
+                <option value="GAUT">Gauteng</option>
+                <option value="KZNT">KwaZulu-Natal</option>
+                <option value="NPRO">Limpopo</option>
+                <option value="MPUM">Mpumalanga</option>
+                <option value="NWES">North West</option>
+                <option value="NCAP">Northern Cape</option>
+                <option value="WESC">Western Cape</option>
+                <option value="OTHR">Other</option>
+            </select>
+        </div>
+
+        <div class="form-row formListInputLrg">
+            <select ng-model="data.reg_City" ng-options="regCity.distname for regCity in regCityDD track by regCity.distcode" style="width:100%;">
+                <option value="">Select a City</option>
+            </select>
+        </div>
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.reg_Suburb" placeholder="Suburb" value="">
+        </div>
+    </div>
+    <div class="formList"><strong>1. How are you paying your Union Fee? *</strong></div>
+    <div style="padding: 0px 20px 0px 10px;">
+        <div class="form-row formListInputLrg">
+            <select ng-model="data.saftuPayment" style="width:100%;">
+                <option value="Salary Deduction">Salary Deduction</option>
+                <option value="Debit Order">Debit Order</option>
+                <option value="Cash">Cash</option>
+                <option value="Not Paying">Not Paying</option>
+            </select>
+        </div>
+    </div>
+    <div class="formList"><strong>2. Who is your Employer?</strong></div>
+    <div style="padding: 0px 20px 0px 10px;">
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.saftuEmp" placeholder="Employer" value="">
+        </div>
+    </div>
+    <div class="formList"><strong>3. Are you a Shop Steward?</strong></div>
+    <div style="padding: 0px 20px 0px 10px;">
+        <div class="form-row button-bar" style="width:100%; padding: 10px;">
+            <ons-row>
+                <ons-col>
+                    <label class="left">
+                        <ons-radio name="saftuShop" input-id="saftuShopY" ng-model="data.saftuShop" value="Y"></ons-radio>
+                    </label>
+                    <label for="saftuShopY" class="center">
+                        Yes
+                    </label>
+                </ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col>
+                    <label class="left">
+                        <ons-radio name="saftuShop" input-id="saftuShopN" ng-model="data.saftuShop" value="N" ></ons-radio>
+                    </label>
+                    <label for="saftuShopN" class="center">
+                        No
+                    </label>
+                </ons-col>
+            </ons-row>
+        </div>
+    </div>
+    <div class="formList"><strong>4. Who is the head of your Shop Steward Council?</strong></div>
+    <div style="padding: 0px 20px 0px 10px;">
+        <div class="form-row formListInputLrg">
+            <input type="text" class="text-input" ng-model="data.saftuShopHead" placeholder="Head of council" value="">
+        </div>
+    </div>
+    <hr />
+    <div style="padding: 0px 20px 0px 10px;">
+        <label class="left">
+            <ons-checkbox input-id="check-1" ng-model="data.tc_y" value="yes"></ons-checkbox>
+        </label>
+        <label for="check-1" class="center">
+            I have read and accept the terms & conditions.
+        </label>
+        <br><br>
+        <label class="left">
+            <ons-checkbox input-id="check-3" ng-model="data.privacy_y" value="yes"></ons-checkbox>
+        </label>
+        <label for="check-3" class="center">
+            I accept the <a onclick="myNavigator.pushPage('views/privacy.html', { animation : 'slide' } )">Privacy Policy</a>
+        </label>
+        <br><br>
+        <label class="left">
+            <ons-checkbox input-id="check-2" ng-model="data.market_y" value="yes"></ons-checkbox>
+        </label>
+        <label for="check-2" class="center">
+            I would like to receive special deals, products and promotions related to the programme.
+        </label>
+    </div>
+    <div class="formList" ng-if="!data.regBusy"><ons-button modifier="large" class="reg-button" ng-click="registerME()">SUBMIT</ons-button></div>
+    <div class="formList" ng-if="data.regBusy"><ons-button modifier="large" class="reg-button">Processing Request</ons-button></div>
+    <p>&nbsp;</p>
+    <ons-bottom-toolbar ng-style="{'background-color':footerBG}">
+        <ons-row vertical-align="center" style="height: 44px">
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 25px;" onclick="myNavigator.pushPage('views/home.html', { animation : 'slide' } )"><ons-icon icon="ion-home"></ons-icon></ons-col>
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 25px;" onclick="myNavigator.pushPage('views/socialmedia.html', { animation : 'slide' } )"><ons-icon icon="ion-heart"></ons-icon></ons-col>
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 15px;" ng-click="loadpage(5)">T&C’s</ons-col>
+        </ons-row>
+    </ons-bottom-toolbar>
+</ons-page>

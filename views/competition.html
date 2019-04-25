@@ -1,0 +1,149 @@
+<ons-page style="font-size: 14px;">
+    <ons-toolbar ng-style="{'background-color':topbarBG}">
+        <div class="left">
+            <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Competition</div>
+        <div class="right"></div>
+    </ons-toolbar>
+    <div class="topBanner">
+        <div style="display: block;"><img src="images/compsHead.jpg" style="max-width: 600px; width: 100%;" /></div>
+    </div>
+    <div ng-if="guest">
+        <div style="padding: 0px 20px 20px 10px;">
+            <p>Please sign up / login to enter the competition.</p>
+        </div>
+    </div>
+    <div ng-if="!guest && !didComp">
+        <div class="formList"><strong>Do you have a cellular contract or are you pre-paid?</strong></div>
+        <div style="padding: 0px 20px 0px 10px;">
+            <div class="form-row formListInputLrg">
+                <select ng-model="data.compq1" style="width:100%;">
+                    <option value="Contract">Contract</option>
+                    <option value="Pre-paid">Pre-paid</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+        </div>
+        <div class="formList"><strong>How many people do you buy airtime for monthly?</strong></div>
+        <div style="padding: 0px 20px 0px 10px;">
+            <div class="form-row formListInputLrg">
+                <select ng-model="data.compq2" style="width:100%;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+        </div>
+        <div class="formList"><strong>Do you use more voice or more data monthly?</strong></div>
+        <div style="padding: 0px 20px 0px 10px;">
+            <div class="form-row formListInputLrg">
+                <select ng-model="data.compq3" style="width:100%;">
+                    <option value="Voice">Voice</option>
+                    <option value="Data">Data</option>
+                </select>
+            </div>
+        </div>
+        <div class="formList"><strong>Do you use Digital Banking?</strong></div>
+        <div style="padding: 0px 20px 0px 10px;">
+            <div class="form-row formListInputLrg">
+                <select ng-model="data.compq4" style="width:100%;">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="formList"><strong>Do you have a Medical Aid or Health Insurance?</strong></div>
+        <div style="padding: 0px 20px 0px 10px;">
+            <div class="form-row formListInputLrg">
+                <select ng-model="data.compq5" style="width:100%;">
+                    <option value="Medical Aid">Medical Aid</option>
+                    <option value="Health Insurance">Health Insurance</option>
+                    <option value="Both">Both</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+        </div>
+        <div class="formList"><strong>Where do you do your monthly grocery shopping?</strong></div>
+        <div style="padding: 0px 20px 0px 10px;">
+            <div class="form-row formListInputLrg">
+                <select ng-model="data.compq6" style="width:100%;">
+                    <option value="Checkers">Checkers</option>
+                    <option value="Shoprite">Shoprite</option>
+                    <option value="Pick & Pay">Pick & Pay</option>
+                    <option value="Food Lovers Market">Food Lover’s Market</option>
+                    <option value="Spar">Spar</option>
+                    <option value="Boxer">Boxer</option>
+                    <option value="Usave">Usave</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="formList"><strong>Cell Number</strong></div>
+        <div style="padding: 0px 20px 0px 10px;">
+            <div class="form-row formListInputLrg">
+                <input type="text" class="text-input" ng-model="data.compCell" placeholder="CELL No">
+            </div>
+        </div>
+        <div class="formList"><strong>Affiliated Union</strong></div>
+        <div style="padding: 0px 20px 0px 10px;">
+            <div class="form-row formListInputLrg">
+                <select ng-model="data.compUnion" style="width:100%;">
+                    <option value="APSA">APSA</option>
+                    <option value="COWU">COWUSA</option>
+                    <option value="CSAA">CSAAWU</option>
+                    <option value="CWAW">CWAWU</option>
+                    <option value="DEMA">DEMAWUSA</option>
+                    <option value="DEPA">DEPACU</option>
+                    <option value="DETA">DETAWU</option>
+                    <option value="EUSA">EUSA</option>
+                    <option value="FAWU">FAWU</option>
+                    <option value="FUWO">FUWO</option>
+                    <option value="GIWU">GIWUSA</option>
+                    <option value="ICTU">ICTU</option>
+                    <option value="IICU">IICUOSA</option>
+                    <option value="MATU">MATUSA</option>
+                    <option value="MWAS">MWASA</option>
+                    <option value="NTM">NTM (PRIVATE company)</option>
+                    <option value="NTMM">NTM</option>
+                    <option value="NUCA">NUCAAW</option>
+                    <option value="NUMS">NUMSA</option>
+                    <option value="NUPA">NUPSAW</option>
+                    <option value="PRIS">PRISAWU</option>
+                    <option value="SACS">SACOSWU</option>
+                    <option value="SACU">SACSU</option>
+                    <option value="SAFP">SAFPU</option>
+                    <option value="SAIC">SAICWU</option>
+                    <option value="SALP">SALIPSWU</option>
+                    <option value="SAPU">SAPU</option>
+                    <option value="SASA">SASAWU</option>
+                    <option value="SASW">SASWU</option>
+                    <option value="TASW">TASWU</option>
+                    <option value="THOR">THORN</option>
+                    <option value="VIWU">VIWU</option>
+                    <option value="YNIT">YNITU</option>
+                    <option value="OTEH">OTHER</option>
+                </select>
+            </div>
+        </div>
+        <div style="padding:20px;">Terms & Conditions apply.</div>
+        <div class="formList" ng-if="!data.regBusy"><ons-button modifier="large" class="reg-button" ng-click="enterComp()">ENTER THE COMPETITION</ons-button></div>
+    </div>
+    <div ng-if="!guest && didComp">
+        <p>You have already entered the competition, good luck!</p>
+    </div>
+    <ons-bottom-toolbar ng-style="{'background-color':footerBG}">
+        <ons-row vertical-align="center" style="height: 44px">
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 25px;" onclick="myNavigator.pushPage('views/home.html', { animation : 'slide' } )"><ons-icon icon="ion-home"></ons-icon></ons-col>
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 25px;" onclick="myNavigator.pushPage('views/socialmedia.html', { animation : 'slide' } )"><ons-icon icon="ion-heart"></ons-icon></ons-col>
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 15px;" ng-click="loadpage(5)">T&C’s</ons-col>
+        </ons-row>
+    </ons-bottom-toolbar>
+</ons-page>

@@ -1,0 +1,35 @@
+<ons-page>
+    <ons-toolbar ng-style="{'background-color':topbarBG}">
+        <div class="left">
+            <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Wallpapers</div>
+        <div class="right"></div>
+    </ons-toolbar>
+    <div class="topBanner">
+        <div style="display: block;"><img src="images/wallHead.jpg" style="max-width: 600px; width: 100%;" /></div>
+    </div>
+    <ons-row>
+        <ons-col width="50%" align="left"><a href="images/wallpapers/wallpaper001.png" download><img src="images/wall1.jpg" style="max-width: 300px; width: 100%;" /></a></ons-col>
+        <ons-col width="50%" align="right"><a href="images/wallpapers/wallpaper002.png" download><img src="images/wall2.jpg" style="max-width: 300px; width: 100%;" /></a></ons-col>
+    </ons-row>
+    <ons-row>
+        <ons-col width="50%" align="left"><a href="images/wallpapers/wallpaper005.png" download><img src="images/wall3.jpg" style="max-width: 300px; width: 100%;" /></a></ons-col>
+        <ons-col width="50%" align="right"><a href="images/wallpapers/wallpaper007.png" download><img src="images/wall4.jpg" style="max-width: 300px; width: 100%;" /></a></ons-col>
+    </ons-row>
+    <ons-row>
+        <ons-col width="50%" align="left"><a href="images/wallpapers/wallpaper004.png" download><img src="images/wall5.jpg" style="max-width: 300px; width: 100%;" /></a></ons-col>
+        <ons-col width="50%" align="right"><a href="images/wallpapers/Nomvume wallpaper.png" download><img src="images/wall6.jpg" style="max-width: 300px; width: 100%;" /></a></ons-col>
+    </ons-row>
+    <ons-row>
+        <ons-col width="50%" align="left"><a href="images/wallpapers/Phakedi wallpaper.png" download><img src="images/wall7.jpg" style="max-width: 300px; width: 100%;" /></a></ons-col>
+        <ons-col width="50%" align="right"><a href="images/wallpapers/wallpaper003.png" download><img src="images/wall9.jpg" style="max-width: 300px; width: 100%;" /></a></ons-col>
+    </ons-row>
+    <ons-bottom-toolbar ng-style="{'background-color':footerBG}">
+        <ons-row vertical-align="center" style="height: 44px">
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 25px;" onclick="myNavigator.pushPage('views/home.html', { animation : 'slide' } )"><ons-icon icon="ion-home"></ons-icon></ons-col>
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 25px;" onclick="myNavigator.pushPage('views/socialmedia.html', { animation : 'slide' } )"><ons-icon icon="ion-heart"></ons-icon></ons-col>
+            <ons-col vertical-align="center" style="text-align: center; line-height: 44px; font-size: 15px;" ng-click="loadpage(5)">T&C’s</ons-col>
+        </ons-row>
+    </ons-bottom-toolbar>
+</ons-page>
